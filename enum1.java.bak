@@ -1,0 +1,14 @@
+enum Months
+{
+	JAN,FEB,MAR
+}
+
+class enum1  
+{
+	public static void main(String[] args) 
+	{
+		Months m=Months.JAN;
+
+		System.out.println(m); // JAN
+	}
+}

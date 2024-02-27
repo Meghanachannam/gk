@@ -1,0 +1,27 @@
+ import java.util.Arrays;
+ class strimp7
+ {
+	 public static void main(String[] args)
+	 {
+		 String str1="read";
+		 String str2="door";
+		 char[] carr1=str1.toCharArray();
+		 char[] carr2=str2.toCharArray();
+		 Arrays.sort(carr1);
+		 Arrays.sort(carr2);
+		 boolean flag=true;
+		 for(int i=0;i<carr1.length&&i<carr2.length;i++)
+		 {
+			 if(carr1[i]!=carr2[i])
+			 {
+				 flag=false;
+				 break;
+			 }
+		 }
+		 if(flag)
+			 System.out.println("it is anagram string");
+		 else
+			 System.out.println("it is not anagram string");
+	 }
+ }
+				 

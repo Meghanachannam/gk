@@ -1,0 +1,33 @@
+def is_valid_csrf_token(csrf_token):
+        return bool(re.match("^[a-zA-Z0-9]{8,}$", csrf_token))
+
+    def parse_params(url):
+        params = re.findall(r'\?(.*?)$', url)
+        if params:  
+            params = params[0].split('&')
+            return [param.split('=') for param in params]
+        return []
+    responses = []
+    for request in requests:
+        request_type, url  = request[0], request[1]
+        auth_token = re.findall(r'token=([^&]+)', url)
+        if not auth_token or auth_token[0] not in valid_auth_tokens:
+            responses.append("INVALID")
+        else:
+            if request_type == "POST":
+                csrf_token = re.findall(r'csrf=([^&]+)', url)
+                if not csrf_token or not is_valid_csrf_token(csrf_token[0]): 
+                    responses.append("INVALID")
+                else:
+                    params = parse_params(url)
+                    response_str = f"VALID,{','.join([f'{param[0]},{param[1]}' for param in params if param[0] !='token' and param[0]!='csrf'])}"
+                    responses.append(response_str)
+            elif request_type == "GET":
+                params = parse_params(url)
+                if params:
+                    response_str = f"VALID,{','.join([f'{param[0]},{param[1]}' for param in params if param[0] !='token'])}"
+                else:
+                    response_str = "VALID"
+                responses.append(response_str)
+    return responses
+

@@ -1,0 +1,9 @@
+class stringupper  
+{
+	public static void main(String[] args) 
+	{
+		String str="bhaskar";
+
+		System.out.println(str.toUpperCase());
+	}
+}

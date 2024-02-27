@@ -1,0 +1,11 @@
+class portal
+{
+	public static void main(String[]args)
+	{
+		String originalString="Computer Portal";
+		String stringToBeInserted="Science";
+		int index=8;
+		String result=originalString.substring(0,index)+stringToBeInserted+originalString.subString(index);
+		System.out.println("Output:"=result);
+	}
+}

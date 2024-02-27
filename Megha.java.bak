@@ -1,0 +1,19 @@
+class Megha
+{
+	public string meth1(String a)
+	{
+		System.out.println("core java");
+		return "100+a";
+	}
+	public void meth2()
+	{
+		System.out.println("adv");
+	}
+		public static void main(String[] args)
+	{
+			ClassA aobj=new ClassA();
+			String result=obj.meth1(100);
+			System.out.println("result");
+			obj.meth2();
+	}
+}

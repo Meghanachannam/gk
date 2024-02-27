@@ -1,0 +1,18 @@
+class sumoftwoarray
+{
+	public static void main(String[] args)
+	{
+		int[] arr1={5,9,2,1,3};
+		int[] arr2={6,7,9,8,2};
+		int[] resArr=new int[arr1.length];
+		for(int i=0;i<arr1.length||i<arr2.length;i++)
+	{
+			resArr[i]=arr1[i]+arr2[i];
+	}
+	//display
+	for(int i:resArr)
+	{
+		System.out.print(i+" ");
+	}
+}
+}

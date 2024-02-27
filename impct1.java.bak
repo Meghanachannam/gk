@@ -1,0 +1,9 @@
+class impct1 
+{
+	public static void main(String[] args) 
+	{
+		char ch='6';
+		long l=ch;
+		System.out.println(l);
+	}
+}

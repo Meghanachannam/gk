@@ -1,0 +1,20 @@
+interface A
+{
+	//abstract method
+	public abstract void m1();
+}
+class B implements A
+{
+	piblic void m1()
+	{
+		System.out.println("M1-Method");
+	}
+}
+class interface1
+{
+	public static voidmain(String[] args)
+	{
+		A a=new B();
+		a.m1();
+	}
+}

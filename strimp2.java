@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class strimp2
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the string:");
+		String str=sc.nextLine();
+		char[]carr=str.toCharArray();
+		String rev="";
+		for(int i=carr.length-1;i>=0;i--)
+		{
+			rev+=carr[i];
+		}
+		if(str.equals(rev))
+			System.out.println("it is a palindrome");
+		else
+			System.out.println("it is not a palindrome");
+	}
+}

@@ -1,0 +1,20 @@
+class imp14
+{
+	public static void main(String[] args)
+	{
+		int m1=20,m2=40;
+		int i,j;
+		for(int i=m1;i<=m2;i++)
+		{
+			for(j=2;j<i;j++)
+			{
+				if(i%j==0)
+				{
+					break;
+				}
+			}
+			if(i==j)
+				System.out.print(i+" ");
+		}
+	}
+}
